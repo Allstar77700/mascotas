@@ -1,0 +1,337 @@
+/* Paleta de Colores (6 tonos de morado y celeste/turquesa)
+   Turquesa Claro: #B2E2E6, #A0D9DD, #8ECFD4
+   Morado: #5C00B0, #7B1FA2, #9C27B0
+*/
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #B2E2E6; /* Turquesa claro de fondo */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header y Navegación */
+header {
+    background-color: #A0D9DD; /* Un tono de turquesa para el header */
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #5C00B0; /* Morado para el logo */
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #7B1FA2; /* Tono de morado para los enlaces */
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #9C27B0; /* Morado más vibrante al pasar el mouse */
+}
+
+/* Sección Hero (Presentación) */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Altura de la imagen de presentación */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor */
+    filter: brightness(70%); /* Oscurece un poco la imagen para que el texto resalte */
+}
+
+.hero-text {
+    position: absolute;
+    color: #fff;
+    z-index: 10;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    color: #B2E2E6; /* Turquesa claro para el título */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    color: #A0D9DD; /* Tono de turquesa para el párrafo */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Secciones Generales */
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    color: #5C00B0; /* Morado para los títulos de sección */
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+section h2::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background-color: #8ECFD4; /* Turquesa para la línea debajo del título */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+    border-radius: 2px;
+}
+
+/* Sección Productos */
+.products-section {
+    background-color: #A0D9DD; /* Fondo turquesa claro para la sección de productos */
+    border-radius: 15px;
+    padding: 60px 40px;
+    margin-bottom: 50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    border: 2px solid #8ECFD4; /* Borde turquesa para las tarjetas */
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #B2E2E6;
+}
+
+.product-card h3 {
+    color: #7B1FA2; /* Tono de morado para títulos de producto */
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.product-card button {
+    background-color: #5C00B0; /* Morado para los botones */
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #7B1FA2; /* Tono de morado más claro al pasar el mouse */
+}
+
+/* Sección Quiénes Somos y Concepto */
+.about-us-section, .concept-section {
+    background-color: #F8F8F8; /* Fondo claro para estas secciones */
+    border-radius: 15px;
+    padding: 60px 40px;
+    margin-bottom: 50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+.about-content, .concept-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-content p, .concept-content p, .concept-content ul {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.concept-content h3 {
+    color: #7B1FA2;
+    font-size: 1.8rem;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.concept-content h4 {
+    color: #9C27B0;
+    font-size: 1.4rem;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.concept-content ul {
+    list-style-type: disc;
+    padding-left: 25px;
+}
+
+.concept-content ul li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Sección Contacto */
+.contact-section {
+    background-color: #A0D9DD; /* Turquesa para la sección de contacto */
+    border-radius: 15px;
+    padding: 60px 40px;
+    margin-bottom: 50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-info {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+.contact-info strong {
+    color: #5C00B0;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-form h3 {
+    color: #7B1FA2;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: calc(100% - 40px); /* Ajuste para padding */
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border: 1px solid #8ECFD4; /* Borde turquesa para inputs */
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #E6F8F9; /* Fondo claro para los campos */
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #5C00B0; /* Morado al enfocar */
+    box-shadow: 0 0 0 3px rgba(92, 0, 176, 0.2); /* Sombra morada suave */
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form button {
+    background-color: #5C00B0; /* Morado para el botón de enviar */
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    max-width: 300px;
+}
+
+.contact-form button:hover {
+    background-color: #7B1FA2; /* Tono de morado más claro al pasar el mouse */
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background-color: #5C00B0; /* Morado oscuro para el footer */
+    color: #fff;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}

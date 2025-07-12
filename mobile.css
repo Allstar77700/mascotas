@@ -1,0 +1,127 @@
+/* mobile.css */
+
+@media (max-width: 768px) {
+    header {
+        padding: 0.8rem 0;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 15px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+        display: block;
+        padding: 8px 0;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        background-color: rgba(92, 0, 176, 0.1); /* Morado muy suave para el hover en móvil */
+    }
+
+    .hero {
+        height: 400px; /* Menor altura para la imagen en móvil */
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
+    }
+
+    section {
+        padding: 40px 15px; /* Menor padding en móvil */
+    }
+
+    section h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    section h2::after {
+        width: 60px;
+        bottom: -10px;
+    }
+
+    .products-section, .about-us-section, .concept-section, .contact-section {
+        padding: 40px 20px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* Una columna por producto en móvil */
+        gap: 25px;
+    }
+
+    .product-card {
+        padding: 20px;
+    }
+
+    .product-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .product-card p {
+        font-size: 0.95rem;
+    }
+
+    .product-card button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .about-content p, .concept-content p, .concept-content ul li {
+        font-size: 1rem;
+    }
+
+    .concept-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .concept-content h4 {
+        font-size: 1.2rem;
+    }
+
+    .contact-info {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: calc(100% - 30px); /* Ajuste para padding */
+        padding: 12px 15px;
+    }
+
+    .contact-form button {
+        padding: 12px 25px;
+        font-size: 1.1rem;
+        max-width: 250px;
+    }
+
+    footer {
+        padding: 20px 15px;
+        font-size: 0.8rem;
+    }
+}
